@@ -10,7 +10,6 @@ Finexo is a web application that allows users to upload, validate, and import Ex
 ```env
 PORT=8000
 MONGO_URI=mongodb://localhost:27017/finexo
-NODE_ENV=development
 ```
 
 2. Create `.env` file in the frontend directory (if needed):

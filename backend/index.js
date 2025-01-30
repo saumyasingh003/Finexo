@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import multer from "multer";
+import connectDB from "./config/db.js";
 
 
 dotenv.config();
@@ -27,10 +28,7 @@ app.use((err, req, res, next) => {
 
 app.use("/api", uploadRoutes);
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+connectDB();
 
 
 const PORT = process.env.PORT || 5000;

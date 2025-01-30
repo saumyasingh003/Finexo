@@ -49,7 +49,7 @@ const FileUploadPage: React.FC = () => {
         isProcessing: false
       });
 
-      axios.post('http://localhost:8000/api/upload', formData, {
+      axios.post('https://finexo-backend-xi.vercel.app/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -181,7 +181,7 @@ const FileUploadPage: React.FC = () => {
   const handleImport = (): void => {
     const loadingToast = toast.loading('Importing data...');
     
-    axios.post('http://localhost:8000/api/import', { 
+    axios.post('https://finexo-backend-xi.vercel.app/api/import', { 
       data: selectedSheet,
       errors: errors
     })

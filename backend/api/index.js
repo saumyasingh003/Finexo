@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import uploadRoutes from "./routes/uploadRoutes.js";
+import uploadRoutes from "../routes/uploadRoutes.js";
 import multer from "multer";
-import connectDB from "./config/db.js";
+import connectDB from "../config/db.js";
 
 
 dotenv.config();
